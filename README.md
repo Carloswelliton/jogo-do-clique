@@ -82,6 +82,6 @@ Crianças de 3 a 6 anos.
 Pais, professores e terapeutas que buscam atividades educativas.
 
 ## 📄 Licença
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+Este projeto está sob a licença MIT.
 
 > Desenvolvido com carinho para tornar o aprendizado mais divertido 🐶🦜🐷
