@@ -80,15 +80,35 @@
       background: #0099cc;
     }
 
-    #configuracao {
+    /* Botão de colapse */
+    #toggleConfig {
       position: absolute;
       top: 10px;
+      right: 10px;
+      background: #00bfff;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    #toggleConfig:hover {
+      background: #0099cc;
+    }
+
+    /* Painel de configuração */
+    #configuracao {
+      position: absolute;
+      top: 50px;
       right: 10px;
       background: white;
       padding: 10px;
       border-radius: 10px;
       z-index: 1000;
       box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+      display: none; /* Inicialmente fechado */
     }
 
     #configuracao input {
@@ -111,6 +131,9 @@
   </style>
 </head>
 <body>
+
+  <!-- Botão para colapse -->
+  <button id="toggleConfig">⚙️ Configurações</button>
 
   <!-- Configuração -->
   <div id="configuracao">
@@ -237,6 +260,16 @@
     function setarTempo(valor) {
       tempoInput.value = valor;
     }
+
+    // Função para abrir/fechar configurações
+    document.getElementById("toggleConfig").addEventListener("click", () => {
+      const config = document.getElementById("configuracao");
+      if (config.style.display === "none" || config.style.display === "") {
+        config.style.display = "block";
+      } else {
+        config.style.display = "none";
+      }
+    });
   </script>
 </body>
 </html>
